@@ -15,7 +15,7 @@ function playCraps(){
     document.getElementById("sumResults").innerHTML = "Sum: " + sum;
     //Assess the outome of game based on rules given
     if (sum === 7 || sum === 11) {
-        document.getElementById("finalResult").innerHTML = "CRAPS! - You Lose!!";
+        document.getElementById("finalResults").innerHTML = "CRAPS! - You Lose!!";
     } else if (die1 === die2 && die1 % 2 === 0) {
         document.getElementById("finalResults").innerHTML = "You Won!!!";
     } else {
