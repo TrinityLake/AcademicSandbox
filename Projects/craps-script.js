@@ -9,8 +9,6 @@ function playCraps(){
     var die2 = rollDice();
     //Add both die1 and die2 together
     var sum = die1 + die2;
-    //Logs the value of the sum
-    console.log("Sum:+sum");
     //Display result of both die and adds them together
     document.getElementById("die1Results").innerHTML = "Die 1: " + die1;
     document.getElementById("die2Results").innerHTML = "Die 2: " + die2;
