@@ -3,7 +3,7 @@
 // Function to check if a string is a palindrome
 function isPalindrom(str) {
     // Remove non-alphanumeric characters and convert to lowercase
-    str=str.replace(/[^A-Za-zO-9]/g,'').toLowerCase();
+    str=str.replace(/[^A-Za-zO-9]/g, '').toLowerCase();
     // Reverse the string
     const reversedStr = str.split('').reverse().join('');
     // Check if the original and reversed strings are equal
@@ -14,7 +14,7 @@ function isPalindrom(str) {
 function handleFormSubmit(event) {
     event.preventDefault();
     // Get user input value
-    const userInput = document.getElementById('userIput').value;
+    const userInput = document.getElementById('userInput').value;
     // Check if the input is a palindrome
     const isPalindromic = isPalindrome(userInput);
     // Display results to the user 
@@ -29,4 +29,4 @@ function handleFormSubmit(event) {
 }
 
 // Add event listener to form submission 
-document.getElementById('palindromForm').addEventListener('submit'), handleFormSubmit;
+document.getElementById('palindromeForm').addEventListener('submit'), handleFormSubmit;
