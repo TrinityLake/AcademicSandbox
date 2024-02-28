@@ -1,11 +1,11 @@
-<!-- Palindrome Checker by Lisa F. -->
+<!-- Palindrome Checker + Secret Message by Lisa F. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palindrome Checker</title>
-    <link rel="stylesheet" href="palindrome.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="palindrome.css"> <!-- Reusing external CSS file -->
 </head>
 <body>
     <div class="container">
@@ -18,6 +18,21 @@
         </form>
         <div id="result"></div> <!-- Dive to display the result -->
     </div>
+
+    <div class="container"> <!--New container for secret message functionality -->
+        <h1> Access the Secret Message</h1>
+        <form id="secretMessageForm" onsubmit="validateInput(event)">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required><br>
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" id="zipCode" required pattern="[0-9]{5}" title="Zip code must be 5 digits"><br>
+            <button type="submit">Acess Message</button>
+        </form>
+        <div id="messageDisplay"></div>
+    </div>
     <script src="palindrome.js"></script> <!-- Link to external JavaScript file -->
+    <script src="security.js"></script> <!-- New JavaScript file for secret message validation -->
 </body>
 </html>
