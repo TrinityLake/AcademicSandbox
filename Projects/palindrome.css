@@ -17,12 +17,13 @@ h1{
     font-size: 2em;
 }
 
-input[type="text"]{
-    width: 100%;
+input[type="text"] {
+    width: calc(100% - 22px);
     padding: 10px;
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 button {

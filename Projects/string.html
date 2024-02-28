@@ -1,20 +1,21 @@
+<!-- Palindrome Checker by Lisa F. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palindrome Checker</title>
-    <link rel=""stylesheet" href="palindrome.css">
+    <link rel="stylesheet" href="palindrome.css">
 </head>
 <body>
     <div class="container">
         <h1>Palindrome Checker</h1>
-        <form id="palindromeForm">
-            <label for="userInput">Enter a word or phrase:</label>
+        <form id="palindromForm" onsubmit="handleFormSubmit(event)">
+            <label for="userInput">Enter a word:</label>
             <input type="text" id="userInput" required>
             <button type="submit">Check</button>
         </form>
-        <div id="result"></div>
+        <div if="result"></div>
     </div>
     <script src="palindrome.js"></script>
 </body>

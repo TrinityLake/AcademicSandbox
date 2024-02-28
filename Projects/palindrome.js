@@ -7,3 +7,4 @@ function isPlaindrome(str) {
     // Check if the string is equal to its reverse
     return str === str.split('').reverse().join('');
 }
+
