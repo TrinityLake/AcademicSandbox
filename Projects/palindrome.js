@@ -41,3 +41,14 @@ function handleFormSubmit(event) {
     // Clear the input field
     document.getElementById('userInput').value = '';
 }
+
+    // Function to play the mystical sound when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        const playAudioButton = document.getElementById('playAudioButton');
+        const mysticalSound = new Audio('mystical-sound.mp3');
+
+        playAudioButton.addEventListener('click', function() {
+            mysticalSound.play(); // Play the mystical sound when the button is clicked
+        });
+    });
+
