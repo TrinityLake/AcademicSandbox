@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Navigation and Tables - Boards</title>
+    <link rel="stylesheet" href="cheap-flights.css">
+</head>
+<body>
+    <header>
+        <h1>Cheap International Flights</h1>
+    </header>
+    <nav>
+        <h2>Navigation</h2>
+        <a href="./index.html">Home</a><br>
+        <a href="./boards.html">View Flights</a><br>
+    </nav>
+
+    <h2>Cheap International Flights from Phoenix, AZ</h2>
+    
+    <table id="flight-table">
+        <tr>
+            <th>Destinations</th>
+            <th>Departure Date</th>
+            <th>Return Date</th>
+            <th>Stops</th>
+            <th>Price</th>
+        </tr>
+      </table>
+    
+    <footer>
+    <p>Lisa Fortunato</p>
+        <p>University of Advancing Technology</p>
+        <p>2625 W Baseline Rd, Tempe, AZ 85283</p>
+    </footer>
+
+    <script>
+        // Sample flight data
+        const flights = [
+            { destination: "London, United Kingdom", departureDate: "April 28", returnDate: "May 7", stops: "1 Stop", price: "$592"},
+            { destination: "Vancouver, Canada", departureDate: "April 19", returnDate: "April 26", stops: "Nonstop", price: "$106"},
+            { destination: "Rome, Italy", departureDate: "April 13", returnDate: "April 22", stops:"2 Stops", price: "$547"},
+            { destination: "Madrid, Spain", departureDate: "April 27", returnDate: "May 5", stops:"1 Stop", price: "$519"},
+            { destination: "Reykjavik, Iceland", departureDate: "Aug 26", returnDate: "Sep 2", stops:"1 Stops", price: "$603"},
+            { destination: "Barcelona, Spain", departureDate: "April 7", returnDate: "April 16", stops:"1 Stops", price: "$614"},
+        ];
+
+        // Function to dynamically generate table rows for flights
+        function generateFlightsRows() {
+            const table = document.getElementById('flight-table');
+            const tbody = document.createElement('tbody');
+
+            // Loop through each flight in the flights array
+            flights.forEach(flight => {
+                const row = document.createElement('tr');
+
+                // Create and append table cells for each flight detail
+                for (const property in flight) {
+                    const cell = document.createElement('td');
+                    cell.textContent = flight[property];
+                    row.appendChild(cell);
+                }
+
+                // Append the row to the table body
+                tbody.appendChild(row);
+            });
+            // Append the table body to the table
+            table.appendChild(tbody);
+        }
+
+        // Call the function to generate flight rows when the page loads
+        window.onload = generateFlightsRows;
+    </script>
+</body>
+</html>
